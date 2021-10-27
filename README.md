@@ -15,12 +15,12 @@ FlappyBird game with python and pygame
 
 # Run the Game
 
-## Installation requirements
+## Installation Requirements
 ```
 pip install pygame
 ```
 
-## How to run
+## Run the Game
 
 ```
 python main.py
