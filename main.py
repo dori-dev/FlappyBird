@@ -1,8 +1,14 @@
-from constant import *
-from classes import *
+"""main of flappybird game
+"""
+from constant import pygame, WINDOW, WINDOW_WIDTH
+from constant import clock, GAME_TICK, MAINMENU_ACTIVE
+from constant import toolkit, messages, buttons
+from classes import Score, Pipe, Bird, Background, Floor
 
 
 def gameover():
+    """For when the player loses the game
+    """
     WINDOW.blit(messages['game_title'],
                 (WINDOW_WIDTH / 2 - messages['game_title'].get_width() / 2,
                  100)
@@ -27,6 +33,8 @@ def gameover():
 
 
 def mainmenu():
+    """Main menu to start the game
+    """
     WINDOW.blit(messages['game_title'],
                 (WINDOW_WIDTH / 2 - messages['game_title'].get_width() / 2,
                  100)
@@ -47,12 +55,17 @@ def mainmenu():
 
 
 def close_mainmenu():
-    global mainmenu_active
-    mainmenu_active = False
+    """Close main menu and start the game
+    """
+    global MAINMENU_ACTIVE
+    MAINMENU_ACTIVE = False
     run()
 
 
 def run():
+    """This is the base function of the game,
+    where all processes are controlled
+    """
     score = Score()
     background = Background()
     floor = Floor()
@@ -60,7 +73,7 @@ def run():
     pipes = [Pipe(WINDOW_WIDTH+100)]
 
     while True:
-        clock.tick(30)
+        clock.tick(GAME_TICK)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -82,10 +95,10 @@ def run():
             add_pipe = False
             for pipe in pipes:
                 pipe.move()
-                if pipe.collide(bird, WINDOW):
+                if pipe.collide(bird):
                     toolkit.update_display(background, pipes, bird, floor)
                     gameover()
-                if not pipe.passed and pipe.x < bird.x:
+                if not pipe.passed and pipe.x_pos < bird.x_pos:
                     pipe.passed = True
                     add_pipe = True
 
@@ -95,9 +108,10 @@ def run():
                 pipes.pop(0)
             pipes.append(Pipe(WINDOW_WIDTH))
 
-        if mainmenu_active:
+        if MAINMENU_ACTIVE:
             toolkit.update_display(background, floor)
             mainmenu()
+
         toolkit.update_display(background, pipes, bird, floor, score)
 
 
