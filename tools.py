@@ -34,8 +34,8 @@ class Tools:
         """
         for object_ in objects:
             if isinstance(object_, list):
-                for cls_obj in object_:
-                    cls_obj.draw(self.window)
+                for obj in object_:
+                    obj.draw(self.window)
             else:
                 object_.draw(self.window)
 
