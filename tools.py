@@ -32,12 +32,12 @@ class Tools:
     def update_display(self, *objects):
         """update display with objects args
         """
-        for obj in objects:
-            if isinstance(obj, list):
-                for cls_obj in obj:
+        for object_ in objects:
+            if isinstance(object_, list):
+                for cls_obj in object_:
                     cls_obj.draw(self.window)
             else:
-                obj.draw(self.window)
+                object_.draw(self.window)
 
         pygame.display.update()
 
