@@ -13,7 +13,7 @@ FlappyBird game with python and pygame and clean code
 - Graphic Designer - Mohammad Dori
 - Game Developer - Mohammad Dori
 
-# Run the Game
+# Play the Game
 
 ## Installation Requirements
 ```
