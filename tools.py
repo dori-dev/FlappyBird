@@ -30,7 +30,7 @@ class Tools:
         self.window.blit(image, (x_pos, y_pos))
 
     def update_display(self, *objects):
-        """update display with objects args
+        """update display with *objects
         """
         for object_ in objects:
             if isinstance(object_, list):
