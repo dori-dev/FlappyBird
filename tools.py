@@ -1,4 +1,4 @@
-"""toolkit for the game
+"""toolkit for game
 """
 from typing import List
 import pygame
