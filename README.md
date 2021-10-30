@@ -1,5 +1,5 @@
 # FlappyBird
-FlappyBird game with python, pygame, clean code and oop
+FlappyBird game with python, pygame, clean code and OOP
 
 ## Tools
 
