@@ -18,7 +18,7 @@ GAME_TICK = 30
 
 WINDOW = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption('Flappy Bird')
-pygame.display.set_icon(pygame.image.load(join('data', 'icon.png')))
 
 toolkit = Tools(WINDOW, join('data', 'sprites.png'))
-world, bird_images, messages, buttons, numbers_img, scoreboard_img = toolkit.load_images()
+world, bird_images, messages, buttons, numbers_img, scoreboard_img, icon = toolkit.load_images()
+pygame.display.set_icon(icon)
