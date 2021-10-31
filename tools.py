@@ -128,4 +128,6 @@ class Tools:
         numbers[8] = self.setup_image((7, 10), (293, 242, 300, 252), 2)
         numbers[9] = self.setup_image((7, 10), (311, 206, 318, 216), 2)
 
-        return world, bird_images, messages, buttons, numbers, scoreboard
+        icon = self.setup_image((100, 85), (379, 173, 478, 257), 1)
+
+        return world, bird_images, messages, buttons, numbers, scoreboard, icon
