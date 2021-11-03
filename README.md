@@ -8,7 +8,6 @@ FlappyBird game with python, pygame, clean code and OOP!
 - PyGame 2
 
 
-#
 ## Game Creators
 
 - Graphic Designer - Mohammad Dori
@@ -16,12 +15,12 @@ FlappyBird game with python, pygame, clean code and OOP!
 
 #
 # Play the Game
-#
+
 ## Installation Requirements
 ```
 pip install pygame
 ```
-#
+
 ## Run the Game
 
 ```
