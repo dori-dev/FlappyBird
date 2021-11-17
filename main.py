@@ -1,4 +1,4 @@
-"""main of flappybird game
+"""main of flappybird game.
 """
 from constant import pygame, WINDOW, WINDOW_WIDTH
 from constant import clock, GAME_TICK, MAINMENU_ACTIVE
